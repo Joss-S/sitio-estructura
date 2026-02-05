@@ -1,0 +1,159 @@
+<div class="breadcrumbs-container">
+  <section class="intro">
+    <h1>Breadcrumbs</h1>
+    <p>Sistema de navegación secundaria que muestra la ruta jerárquica</p>
+  </section>
+
+  <section class="contenido">
+    <h2>¿Qué son las Breadcrumbs?</h2>
+    <p>
+      Las breadcrumbs, o "migas de pan" en español, son un elemento de navegación secundaria que muestra 
+      a los usuarios su ubicación actual dentro de la jerarquía del sitio web. El término proviene del 
+      cuento de hadas "Hansel y Gretel", donde los personajes dejaban migas de pan para marcar su camino 
+      y poder regresar.
+    </p>
+    <p>
+      Generalmente aparecen cerca de la parte superior de una página, debajo del menú principal, y muestran 
+      una ruta desde la página de inicio hasta la ubicación actual. Cada nivel de la jerarquía es típicamente 
+      un enlace clicable, excepto la página actual que se muestra como texto simple.
+    </p>
+
+    <h3>Tipos de Breadcrumbs</h3>
+    <p>
+      <strong>Breadcrumbs Basadas en Ubicación:</strong> Muestran la jerarquía del sitio según la estructura 
+      de contenido. Son las más comunes y útiles para sitios con múltiples niveles de categorías.
+    </p>
+    <p>
+      <strong>Breadcrumbs Basadas en Atributos:</strong> Usadas principalmente en sitios de comercio 
+      electrónico, muestran los atributos o filtros que el usuario ha seleccionado (ej: Color > Rojo, 
+      Talla > M).
+    </p>
+    <p>
+      <strong>Breadcrumbs Basadas en Historial:</strong> Muestran el camino que el usuario ha seguido 
+      para llegar a la página actual. Son las menos comunes porque pueden resultar confusas si el usuario 
+      navega de manera no lineal.
+    </p>
+
+    <h3>Beneficios de las Breadcrumbs</h3>
+    <p>
+      <strong>Orientación del Usuario:</strong> Ayudan a los usuarios a entender dónde están dentro de 
+      la estructura del sitio, especialmente útil en sitios grandes con muchas páginas.
+    </p>
+    <p>
+      <strong>Navegación Eficiente:</strong> Permiten a los usuarios retroceder fácilmente a niveles 
+      superiores de la jerarquía sin usar el botón de retroceso del navegador o navegar desde el menú 
+      principal.
+    </p>
+    <p>
+      <strong>Reducción de Clics:</strong> Proporcionan accesos directos a páginas de nivel superior, 
+      reduciendo el número de clics necesarios para navegar.
+    </p>
+    <p>
+      <strong>Espacio Mínimo:</strong> Ocupan poco espacio en la página pero ofrecen gran valor funcional.
+    </p>
+    <p>
+      <strong>Reducen Tasa de Rebote:</strong> Al proporcionar opciones claras de navegación, los usuarios 
+      son menos propensos a abandonar el sitio si no encuentran inmediatamente lo que buscan.
+    </p>
+
+    <h3>Beneficios SEO</h3>
+    <p>
+      <strong>Estructura Clara del Sitio:</strong> Los motores de búsqueda utilizan breadcrumbs para 
+      comprender mejor la organización y jerarquía del sitio web.
+    </p>
+    <p>
+      <strong>Enlaces Internos:</strong> Las breadcrumbs crean enlaces internos naturales que ayudan a 
+      distribuir la autoridad de página (PageRank) a través del sitio.
+    </p>
+    <p>
+      <strong>Rich Snippets:</strong> Google puede mostrar breadcrumbs en los resultados de búsqueda, 
+      haciendo que tus listados sean más atractivos y descriptivos. Esto puede aumentar el CTR 
+      (Click-Through Rate).
+    </p>
+    <p>
+      <strong>Palabras Clave:</strong> Las breadcrumbs contienen palabras clave relevantes que refuerzan 
+      el contexto y tema de la página.
+    </p>
+
+    <h3>Mejores Prácticas</h3>
+    <p>
+      <strong>Ubicación Consistente:</strong> Colocar las breadcrumbs en la misma posición en todas las 
+      páginas, generalmente debajo del menú principal y encima del título de la página.
+    </p>
+    <p>
+      <strong>Usar Separadores Claros:</strong> Utilizar símbolos como > , / , o → que indiquen claramente 
+      la dirección de la jerarquía.
+    </p>
+    <p>
+      <strong>No Reemplazar Navegación Principal:</strong> Las breadcrumbs son complementarias, no deben 
+      ser la única forma de navegar por el sitio.
+    </p>
+    <p>
+      <strong>Empezar con "Inicio":</strong> El primer elemento debe ser un enlace a la página principal 
+      del sitio.
+    </p>
+    <p>
+      <strong>Página Actual Sin Enlace:</strong> El último elemento (página actual) debe mostrarse como 
+      texto simple, no como enlace, ya que el usuario ya está en esa página.
+    </p>
+    <p>
+      <strong>Mantener Simplicidad:</strong> Evitar breadcrumbs excesivamente largas. Si hay muchos niveles, 
+      considerar acortar mostrando solo los más relevantes.
+    </p>
+
+    <h3>Implementación Técnica</h3>
+    <p>
+      En este sitio, las breadcrumbs se generan automáticamente usando Angular. El componente breadcrumb 
+      observa los cambios en la ruta de navegación y construye dinámicamente la ruta de breadcrumbs 
+      basándose en la estructura de URLs.
+    </p>
+    <p>
+      Cada segmento de la URL se convierte en un nivel de breadcrumb. El componente mantiene un array 
+      de breadcrumbs que se actualiza cada vez que el usuario navega a una nueva página.
+    </p>
+
+    <h3>Marcado Schema.org</h3>
+    <p>
+      Para maximizar el beneficio SEO, las breadcrumbs deben implementarse con marcado estructurado 
+      Schema.org. Esto ayuda a los motores de búsqueda a identificar y mostrar correctamente las 
+      breadcrumbs en los resultados de búsqueda.
+    </p>
+    <p>
+      El marcado BreadcrumbList de Schema.org proporciona información estructurada sobre cada elemento 
+      de la breadcrumb, incluyendo su posición en la jerarquía, nombre y URL.
+    </p>
+
+    <h3>Accesibilidad</h3>
+    <p>
+      <strong>Elemento nav:</strong> Las breadcrumbs deben envolverse en un elemento &lt;nav&gt; con un 
+      atributo aria-label="breadcrumb" para que los lectores de pantalla las identifiquen correctamente.
+    </p>
+    <p>
+      <strong>Lista Ordenada:</strong> Usar una lista ordenada (&lt;ol&gt;) ya que el orden de las 
+      breadcrumbs es significativo.
+    </p>
+    <p>
+      <strong>Indicador aria-current:</strong> El último elemento debe tener el atributo 
+      aria-current="page" para indicar a las tecnologías asistivas que es la ubicación actual.
+    </p>
+
+    <h3>Diseño Responsive</h3>
+    <p>
+      En dispositivos móviles, las breadcrumbs largas pueden ocupar demasiado espacio. Estrategias comunes 
+      incluyen:
+    </p>
+    <p>
+      - Mostrar solo el nivel padre inmediato precedido por un símbolo de retroceso<br>
+      - Implementar scroll horizontal para breadcrumbs largas<br>
+      - Usar elipsis para acortar niveles intermedios<br>
+      - Colapsar breadcrumbs en un menú desplegable
+    </p>
+
+    <h3>Cuándo No Usar Breadcrumbs</h3>
+    <p>
+      Las breadcrumbs no son necesarias en sitios web pequeños con estructura plana (solo 1-2 niveles de 
+      profundidad). También son innecesarias en aplicaciones web de una sola página donde no hay jerarquía 
+      de contenido, o en sitios con flujos lineales donde el usuario debe seguir pasos específicos en orden.
+    </p>
+  </section>
+</div>

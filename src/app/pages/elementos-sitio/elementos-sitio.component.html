@@ -1,0 +1,196 @@
+<div class="elementos-container">
+  <section class="intro">
+    <h1>Elementos de Navegación</h1>
+    <p>Exploración de los componentes fundamentales que facilitan la navegación y organización del sitio web.</p>
+  </section>
+
+  <section class="elemento">
+    <h2>Menú de Navegación</h2>
+    <p>
+      El menú de navegación es el componente principal que permite a los usuarios moverse entre las diferentes 
+      secciones del sitio web. Ubicado en la parte superior de la página, proporciona acceso rápido a todas 
+      las áreas principales.
+    </p>
+    
+    <h3>Características</h3>
+    <p>
+      El menú implementa una estructura horizontal que se adapta automáticamente a diferentes tamaños de pantalla. 
+      Incluye indicadores visuales para mostrar la página actual y efectos hover que mejoran la experiencia interactiva.
+    </p>
+    
+    <h3>Funcionalidad</h3>
+    <p>
+      Cada enlace del menú está conectado mediante Angular Router, permitiendo navegación sin recargar la página 
+      completa. El estilo activo se aplica automáticamente según la ruta actual, proporcionando retroalimentación 
+      visual constante al usuario.
+    </p>
+    
+    <h3>Mejores Prácticas</h3>
+    <p>
+      - Mantener el número de elementos principales entre 5 y 7 para evitar sobrecarga cognitiva<br>
+      - Usar etiquetas descriptivas y concisas<br>
+      - Implementar navegación por teclado para accesibilidad<br>
+      - Considerar menús desplegables para estructuras jerárquicas complejas<br>
+      - Asegurar suficiente contraste de color para legibilidad
+    </p>
+  </section>
+
+  <section class="elemento">
+    <h2>Breadcrumbs (Migas de Pan)</h2>
+    <p>
+      Las breadcrumbs son un elemento de navegación secundaria que muestra la ruta jerárquica desde la página 
+      de inicio hasta la ubicación actual del usuario. Su nombre proviene del cuento de Hansel y Gretel, 
+      donde usaban migas de pan para marcar su camino.
+    </p>
+    
+    <h3>Propósito</h3>
+    <p>
+      Ayudan a los usuarios a entender su ubicación dentro de la estructura del sitio y proporcionan una forma 
+      rápida de navegar hacia niveles superiores sin usar el botón de retroceso del navegador. Son especialmente 
+      útiles en sitios con múltiples niveles de contenido.
+    </p>
+    
+    <h3>Implementación</h3>
+    <p>
+      En este sitio, las breadcrumbs se generan dinámicamente basándose en la URL actual. Se actualizan 
+      automáticamente con cada navegación y muestran enlaces clicables para cada nivel de la jerarquía, 
+      excepto el nivel actual que se muestra como texto simple.
+    </p>
+    
+    <h3>Ubicación y Estilo</h3>
+    <p>
+      Se posicionan típicamente debajo del menú principal y encima del contenido de la página. Utilizan 
+      separadores visuales (como "/" o ">") entre niveles y mantienen un estilo discreto para no competir 
+      con la navegación principal.
+    </p>
+    
+    <h3>Beneficios SEO</h3>
+    <p>
+      Los motores de búsqueda utilizan las breadcrumbs para entender mejor la estructura del sitio. 
+      Google a menudo las muestra en los resultados de búsqueda, mejorando la visibilidad y el CTR 
+      (Click-Through Rate) de las páginas.
+    </p>
+  </section>
+
+  <section class="elemento">
+    <h2>Mapa del Sitio</h2>
+    <p>
+      El mapa del sitio es una página que proporciona una vista completa y organizada de todas las páginas 
+      y secciones disponibles en el sitio web. Funciona como un índice navegable que ayuda tanto a usuarios 
+      como a motores de búsqueda.
+    </p>
+    
+    <h3>Tipos de Mapas de Sitio</h3>
+    <p>
+      Existen dos tipos principales: HTML y XML. El mapa HTML está diseñado para usuarios humanos y se 
+      presenta como una página web navegable. El mapa XML está orientado a motores de búsqueda y sigue 
+      un formato estructurado específico para facilitar el rastreo e indexación.
+    </p>
+    
+    <h3>Estructura Visual</h3>
+    <p>
+      En este sitio, el mapa se organiza jerárquicamente mostrando secciones principales y sus subsecciones. 
+      Utiliza indentación y elementos visuales para representar la profundidad de la estructura. Cada elemento 
+      es un enlace funcional que permite navegación directa.
+    </p>
+    
+    <h3>Cuándo Usar un Mapa del Sitio</h3>
+    <p>
+      Son especialmente valiosos en sitios web grandes con muchas páginas, sitios con navegación compleja, 
+      sitios nuevos con pocas referencias externas, o sitios con contenido multimedia que los rastreadores 
+      podrían no descubrir fácilmente.
+    </p>
+    
+    <h3>Mantenimiento</h3>
+    <p>
+      Es crucial mantener el mapa del sitio actualizado. Debe reflejar cualquier cambio en la estructura 
+      del sitio, nuevas páginas agregadas o páginas eliminadas. Los mapas desactualizados pueden generar 
+      frustración en usuarios y problemas de SEO.
+    </p>
+  </section>
+
+  <section class="elemento">
+    <h2>Sistema de Búsqueda</h2>
+    <p>
+      Un sistema de búsqueda permite a los usuarios encontrar contenido específico rápidamente sin navegar 
+      manualmente por la estructura del sitio. Es fundamental en sitios con gran cantidad de contenido.
+    </p>
+    
+    <h3>Componentes</h3>
+    <p>
+      Incluye un campo de entrada de texto, un botón de búsqueda, y una página de resultados. Los sistemas 
+      avanzados incorporan autocompletado, sugerencias de búsqueda, filtros, y corrección ortográfica.
+    </p>
+    
+    <h3>Algoritmo de Búsqueda</h3>
+    <p>
+      La calidad de los resultados depende del algoritmo implementado. Puede incluir búsqueda de texto 
+      completo, búsqueda por relevancia, búsqueda fuzzy (tolerante a errores), o búsqueda semántica que 
+      entiende el contexto y las intenciones del usuario.
+    </p>
+    
+    <h3>Experiencia de Usuario</h3>
+    <p>
+      Una buena búsqueda debe ser visible y accesible desde cualquier página, proporcionar resultados 
+      rápidos (idealmente en menos de un segundo), mostrar resultados relevantes primero, y ofrecer opciones 
+      de refinamiento si hay muchos resultados.
+    </p>
+  </section>
+
+  <section class="elemento">
+    <h2>Consideraciones de Accesibilidad</h2>
+    <p>
+      Todos los elementos de navegación deben ser accesibles para usuarios con diferentes capacidades. 
+      Esto incluye navegación por teclado, compatibilidad con lectores de pantalla, y suficiente contraste 
+      visual.
+    </p>
+    
+    <h3>Navegación por Teclado</h3>
+    <p>
+      Los usuarios deben poder navegar por todos los elementos interactivos usando solo el teclado. 
+      La tecla Tab debe mover el foco de manera lógica, Enter debe activar enlaces, y Escape debe cerrar 
+      menús desplegables o modales.
+    </p>
+    
+    <h3>Atributos ARIA</h3>
+    <p>
+      Los atributos ARIA (Accessible Rich Internet Applications) ayudan a los lectores de pantalla a 
+      interpretar elementos de navegación. Por ejemplo, aria-label describe elementos, aria-current 
+      indica la página actual, y aria-expanded muestra el estado de menús expandibles.
+    </p>
+    
+    <h3>Contraste y Tamaño</h3>
+    <p>
+      El texto de navegación debe tener un ratio de contraste de al menos 4.5:1 con el fondo. Los 
+      objetivos de clic deben ser lo suficientemente grandes (mínimo 44x44 píxeles) para usuarios con 
+      dificultades motoras o en dispositivos táctiles.
+    </p>
+  </section>
+
+  <section class="elemento">
+    <h2>Diseño Responsivo</h2>
+    <p>
+      Los elementos de navegación deben adaptarse a diferentes tamaños de pantalla manteniendo su 
+      funcionalidad y usabilidad. Esto requiere consideraciones específicas para dispositivos móviles.
+    </p>
+    
+    <h3>Menú Hamburguesa</h3>
+    <p>
+      En pantallas pequeñas, el menú horizontal típicamente se convierte en un menú hamburguesa (tres líneas). 
+      Al hacer clic, se expande mostrando las opciones verticalmente. Debe ser fácil de cerrar y no bloquear 
+      completamente el contenido.
+    </p>
+    
+    <h3>Breadcrumbs Móviles</h3>
+    <p>
+      En móviles, las breadcrumbs pueden acortarse mostrando solo los niveles más relevantes o implementar 
+      scroll horizontal. Algunos diseños muestran solo el nivel padre inmediato para ahorrar espacio.
+    </p>
+    
+    <h3>Búsqueda Móvil</h3>
+    <p>
+      La búsqueda en móvil puede presentarse como un icono que expande un campo de búsqueda completo. 
+      Debe aprovechar el teclado virtual del dispositivo y permitir búsqueda por voz cuando esté disponible.
+    </p>
+  </section>
+</div>

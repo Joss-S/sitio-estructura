@@ -1,0 +1,77 @@
+<div class="busqueda-container">
+  <h1>Búsqueda</h1>
+  <p class="intro">Encuentra rápidamente el contenido que necesitas.</p>
+
+  <section class="search-section">
+    <div class="search-box">
+      <input 
+        type="text" 
+        class="search-input" 
+        placeholder="¿Qué estás buscando?"
+        [(ngModel)]="query"
+        (keyup.enter)="doSearch()"
+      />
+      <button class="search-button" (click)="doSearch()">
+        Buscar
+      </button>
+    </div>
+
+    <div class="filters-box">
+      <div class="filter-group">
+        <label>Tipo:</label>
+        <select [(ngModel)]="filters.type" (change)="doSearch()">
+          <option value="todos">Todos</option>
+          <option value="pagina">Páginas</option>
+          <option value="seccion">Secciones</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label>Sección:</label>
+        <select [(ngModel)]="filters.section" (change)="doSearch()">
+          <option value="todas">Todas</option>
+          <option *ngFor="let sec of sections" [value]="sec">{{ sec }}</option>
+        </select>
+      </div>
+
+      <button class="btn-clear" (click)="clear()">Limpiar filtros</button>
+    </div>
+  </section>
+
+  <section class="results-section">
+    <ng-container *ngIf="results$ | async as results">
+      
+      <div class="results-info">
+        <p>Se encontraron {{ results.length }} resultado(s)</p>
+      </div>
+
+      <div class="results-list" *ngIf="results.length > 0">
+        <div class="result-card" *ngFor="let item of results">
+          <div class="result-icon">
+            <span *ngIf="item.type === 'pagina'"></span>
+            <span *ngIf="item.type === 'seccion'"></span>
+          </div>
+          <div class="result-content">
+            <a [routerLink]="item.path" class="result-title">{{ item.title }}</a>
+            <p class="result-description">{{ item.descripcion }}</p>
+            <div class="result-meta">
+              <span class="result-category">{{ item.section }}</span>
+              <span class="result-type">{{ item.type }}</span>
+            </div>
+            <div class="result-keywords" *ngIf="item.keywords.length > 0">
+              <span class="keyword" *ngFor="let keyword of item.keywords">{{ keyword }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="no-results" *ngIf="results.length === 0">
+     
+        <h3>No se encontraron resultados</h3>
+        <p>Intenta con otros términos de búsqueda o ajusta los filtros.</p>
+        <button class="btn-primary" (click)="clear()">Limpiar búsqueda</button>
+      </div>
+
+    </ng-container>
+  </section>
+</div>

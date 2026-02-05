@@ -1,0 +1,154 @@
+<div class="menu-container">
+  <section class="intro">
+    <h1>Menú de Navegación</h1>
+    <p>Estructura y funcionamiento del sistema de navegación principal</p>
+  </section>
+
+  <section class="contenido">
+    <h2>¿Qué es un Menú de Navegación?</h2>
+    <p>
+      El menú de navegación es el componente más importante de la interfaz de usuario de un sitio web. 
+      Proporciona a los visitantes una forma clara y consistente de moverse entre las diferentes secciones 
+      y páginas del sitio. Un menú bien diseñado mejora significativamente la experiencia del usuario y 
+      la efectividad del sitio.
+    </p>
+
+    <h3>Tipos de Menús</h3>
+    <p>
+      <strong>Menú Horizontal:</strong> Se extiende de izquierda a derecha en la parte superior de la página. 
+      Es el tipo más común y efectivo para sitios con pocas secciones principales (5-7 elementos).
+    </p>
+    <p>
+      <strong>Menú Vertical:</strong> Se coloca en el lateral de la página, generalmente a la izquierda. 
+      Útil cuando hay muchas opciones o cuando se necesita mostrar jerarquías complejas.
+    </p>
+    <p>
+      <strong>Menú Desplegable (Dropdown):</strong> Muestra subcategorías al pasar el cursor o hacer clic 
+      en un elemento principal. Permite organizar muchas opciones sin saturar el espacio visible.
+    </p>
+    <p>
+      <strong>Menú Hamburguesa:</strong> Común en dispositivos móviles, se representa con tres líneas 
+      horizontales que al tocarse despliegan el menú completo.
+    </p>
+    <p>
+      <strong>Mega Menú:</strong> Versión expandida del menú desplegable que muestra múltiples columnas 
+      de opciones, imágenes y descripciones. Ideal para sitios de comercio electrónico o con muchas categorías.
+    </p>
+
+    <h3>Elementos del Menú de este Sitio</h3>
+    <p>
+      Este sitio implementa un menú horizontal simple con los siguientes elementos:
+    </p>
+    <p>
+      <strong>Inicio:</strong> Página principal que presenta el proyecto y su propósito general.
+    </p>
+    <p>
+      <strong>Elementos:</strong> Explicación detallada de los componentes de navegación implementados.
+    </p>
+    <p>
+      <strong>Menú:</strong> Esta página, que documenta el funcionamiento del sistema de navegación.
+    </p>
+    <p>
+      <strong>Breadcrumbs:</strong> Información sobre el sistema de rutas de navegación.
+    </p>
+    <p>
+      <strong>Mapa del Sitio:</strong> Vista completa de la estructura del sitio.
+    </p>
+    <p>
+      <strong>Búsqueda:</strong> Herramienta para encontrar contenido específico.
+    </p>
+
+    <h3>Principios de Diseño</h3>
+    <p>
+      <strong>Claridad:</strong> Las etiquetas deben ser descriptivas y fáciles de entender. Evitar jerga 
+      técnica o términos ambiguos que puedan confundir a los usuarios.
+    </p>
+    <p>
+      <strong>Consistencia:</strong> El menú debe mantener la misma posición, estilo y comportamiento en 
+      todas las páginas del sitio para no desorientar al usuario.
+    </p>
+    <p>
+      <strong>Visibilidad:</strong> Debe ser fácilmente identificable y accesible. Generalmente se coloca 
+      en la parte superior de la página donde los usuarios esperan encontrarlo.
+    </p>
+    <p>
+      <strong>Retroalimentación:</strong> Indicadores visuales claros deben mostrar sobre qué elemento 
+      está el cursor (hover) y qué página está actualmente activa.
+    </p>
+    <p>
+      <strong>Priorización:</strong> Los elementos más importantes deben colocarse primero (izquierda en 
+      menús horizontales, arriba en menús verticales).
+    </p>
+
+    <h3>Implementación Técnica</h3>
+    <p>
+      Este menú está construido con Angular Router, que permite navegación de una sola página (SPA) sin 
+      recargas completas del navegador. Cada enlace utiliza la directiva routerLink que maneja la navegación 
+      de manera eficiente.
+    </p>
+    <p>
+      La clase 'active' se aplica automáticamente mediante la directiva routerLinkActive, que detecta cuando 
+      la ruta actual coincide con el enlace. Esto proporciona retroalimentación visual inmediata sobre la 
+      ubicación actual del usuario.
+    </p>
+    <p>
+      El CSS utiliza flexbox para crear un layout horizontal flexible que se adapta al contenido. Las 
+      transiciones suaves mejoran la experiencia de interacción al pasar el cursor sobre los elementos.
+    </p>
+
+    <h3>Accesibilidad</h3>
+    <p>
+      El menú implementa las siguientes características de accesibilidad:
+    </p>
+    <p>
+      <strong>Navegación por Teclado:</strong> Se puede navegar usando la tecla Tab, y activar enlaces 
+      con Enter o Espacio.
+    </p>
+    <p>
+      <strong>Etiquetas Semánticas:</strong> Uso de elementos HTML semánticos como &lt;nav&gt; para que 
+      los lectores de pantalla identifiquen correctamente el componente de navegación.
+    </p>
+    <p>
+      <strong>Contraste de Color:</strong> Los colores del texto y fondo cumplen con los estándares WCAG 
+      para asegurar legibilidad.
+    </p>
+    <p>
+      <strong>Indicador de Foco:</strong> Los elementos muestran un indicador visible cuando reciben el 
+      foco del teclado.
+    </p>
+
+    <h3>Responsive Design</h3>
+    <p>
+      En dispositivos móviles y tablets, el menú se adapta para mantener su funcionalidad en espacios 
+      reducidos. Esto puede incluir:
+    </p>
+    <p>
+      - Conversión a menú hamburguesa en pantallas pequeñas<br>
+      - Reducción del padding y tamaño de fuente para optimizar espacio<br>
+      - Apilamiento vertical de elementos cuando el espacio horizontal es insuficiente<br>
+      - Áreas de toque más grandes para facilitar la interacción táctil
+    </p>
+
+    <h3>Mejores Prácticas</h3>
+    <p>
+      <strong>Limitar Opciones:</strong> Mantener entre 5 y 7 elementos principales previene sobrecarga 
+      cognitiva. Para más opciones, usar menús desplegables o mega menús.
+    </p>
+    <p>
+      <strong>Ordenamiento Lógico:</strong> Organizar elementos en un orden que tenga sentido para el 
+      usuario, ya sea por importancia, uso frecuente, o progresión lógica.
+    </p>
+    <p>
+      <strong>Testing de Usuarios:</strong> Probar el menú con usuarios reales para identificar problemas 
+      de usabilidad y áreas de mejora.
+    </p>
+    <p>
+      <strong>Analytics:</strong> Usar herramientas de análisis para entender qué elementos del menú se 
+      usan más y optimizar la estructura en consecuencia.
+    </p>
+    <p>
+      <strong>Evitar Menús Profundos:</strong> No crear jerarquías de más de 2-3 niveles de profundidad, 
+      ya que dificultan la navegación y frustran a los usuarios.
+    </p>
+  </section>
+</div>
